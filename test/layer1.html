@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="../assets/jquery.1.11.js"></script>
+    <script type="text/javascript" src="../assets/layer/layer.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+layer.ready(function(){
+    layer.alert('警告框');
+    //如果点击“确定"之后，会触发参数2的函数
+    layer.confirm('您是否确定删除?', function(){
+        alert(123);
+    });
+    layer.msg('msg输出的信息');
+    //
+    layer.prompt({
+        //0 文本框   1密码框   2多行文本框
+        formType: 1,
+        value: '初始值',
+        title: '请输入值'
+        //点击“确定”时的触发函数
+        //参数1: 文本框中输入的内容
+        //参数2: 当前layer弹出层的id，可以使用close方法来关闭弹出层
+        //参数3: 当前layer弹出层对象
+    }, function(value, index, elem){
+        alert(value); //得到value
+        layer.close(index);
+    });
+})
+
+</script>
+</body>
+</html>

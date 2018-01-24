@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="../assets/jquery.1.11.js"></script>
+    <script type="text/javascript" src="../assets/layer/layer.js"></script>
+</head>
+<body>
+<div id="d" style="display: none">tpye=2时的显示方式</div>
+<script type="text/javascript">
+layer.ready(function(){
+    //打开弹出层
+    var index = layer.open({
+        type:1, //弹出层的类型
+        title: '我的测试', //弹出层的标题
+        area: ['500px', '300px'], //弹出层的宽高
+        maxmin:true,
+        content: $('#d') //弹出层中显示的内容
+        //time: 1000
+    });
+    layer.close(index);
+})
+
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="../assets/jquery.1.11.js"></script>
+    <script type="text/javascript" src="../assets/layer/layer.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+var pic_json = {
+  "title": "", //相册标题
+  "id": 123, //相册id
+  "start": 0, //初始显示的图片序号，默认0
+  "data": [   //相册包含的图片，数组格式
+    {
+      "alt": "<a href='d.php'>图片名111</a>",
+      "pid": 1, //图片id
+      "src": "../uploads/avatar.jpg", //原图地址
+      "thumb": "" //缩略图地址
+    },
+    {
+      "alt": "图片名222",
+      "pid": 2, //图片id
+      "src": "../uploads/slide_1.jpg", //原图地址
+      "thumb": "" //缩略图地址
+    }
+  ]
+}
+layer.photos({
+    //photos: 用来配置图片路径的，必须是一个json对象
+    photos: pic_json 
+    ,shift: 3 //0-6的选择，指定弹出图片动画类型，默认随机
+});
+</script>
+</body>
+</html>

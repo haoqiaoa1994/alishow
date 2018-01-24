@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>Sign in &laquo; Admin</title>
+  <link rel="stylesheet" href="../assets/vendors/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+  <script type="text/javascript" src="../assets/jquery.1.11.js"></script>
+</head>
+<body>
+  <div class="login">
+    <form action="checklogin.php" method="post" class="login-wrap">
+      <img class="avatar" src="../assets/img/default.png">
+      <div class="form-group">
+        <label for="email" class="sr-only">邮箱</label>
+        <input id="email" type="email" name="email" class="form-control" placeholder="邮箱" autofocus>
+      </div>
+      <div class="form-group">
+        <label for="password" class="sr-only">密码</label>
+        <input id="password" type="text" name="pwd" class="form-control" placeholder="密码">
+      </div>
+      <a class="btn btn-primary btn-block" href="javascript:;">登 录</a>
+    </form>
+  </div>
+  <script type="text/javascript">
+    $('.btn').on('click', function(){
+      //先获取表单对象，再调用submit方法提交表单
+      $('form').submit();
+    });
+
+  </script>
+</body>
+</html>
